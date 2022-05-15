@@ -5,7 +5,9 @@ import QuestionCard from './components/QuestionCard';
 // Types
 import { Difficulty, QuestionState } from './API';
 // Styles
-import { GlobalStyle, Wrapper } from './App.styles';
+import { GlobalStyle } from './App.styles';
+// Sass component  
+import styles from './Sass/style.module.scss';
 
 export type AnswerObject = {
   question:string,
@@ -73,16 +75,16 @@ function App() {
   return (
     <>
     <GlobalStyle/>
-    <Wrapper> 
+    <div className={styles.Wrapper}> 
         <h1>QUIZ</h1>
         { gameOver || userAnswers.length === TOTAL_QUESTIONS ?
-          ( <button className='start'
+          ( <button className={styles.start}
             onClick={startTrivia}>
               Start
             </button> )
           :null }
         {!gameOver ? 
-          (<p className="score">Score:{score}</p>)
+          (<p className={styles.score}>Score:{score}</p>)
           :null }
         { loading && <p>loading questions...</p> }
         { !loading && !gameOver && (
@@ -98,12 +100,12 @@ function App() {
         )}
         {!gameOver && !loading  && userAnswers.length === number+1
         && number !== TOTAL_QUESTIONS -1 ? (
-          <button className="next"
+          <button className={styles.next}
           onClick={nextQuestion}>
             Next Question
           </button>
         ):null } 
-    </Wrapper>
+    </div>
     </>
   );
 }

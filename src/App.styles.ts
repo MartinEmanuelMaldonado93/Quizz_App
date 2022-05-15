@@ -1,9 +1,9 @@
-import { url } from 'inspector';
+// import { url } from 'inspector';
 import styled, { createGlobalStyle } from 'styled-components';
 // @ts-ignore
 // Images
 import BGImage from './images/Beach_unsplash.jpg';
-import picsumUrl from './images/picsum_URL';
+// import picsumUrl from './images/picsum_URL';
 
 // let bg_picsum ;
 //  picsumUrl('beach',1200,700);
@@ -29,7 +29,7 @@ html {
   }
 `;
 
-export const Wrapper = styled.div`
+export const _Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,7 +70,4 @@ export const Wrapper = styled.div`
   }
 `
 
-// -webkit-background-clip:text;
-// -webkit-text-fill-color: transparent;
-// -moz-background-clip: text;
-// -moz-text-fill-color:transparent;
+
