@@ -1,13 +1,22 @@
+import { url } from 'inspector';
 import styled, { createGlobalStyle } from 'styled-components';
 // @ts-ignore
+// Images
 import BGImage from './images/Beach_unsplash.jpg';
+import picsumUrl from './images/picsum_URL';
 
+// let bg_picsum ;
+//  picsumUrl('beach',1200,700);
+// 'https://picsum.photos/seed/picsum/1200/700'
+// let str_picsum = `https://picsum.photos/${'beach'}/picsum/${1200}/${700}`
+let seed = Math.floor(Math.random()*300);
 export const GlobalStyle = createGlobalStyle`
 html {
     height: 100%;
   }
   body {
-    background-image: url(${BGImage});
+    // background-image: url(${BGImage});
+    background-image: url('https://picsum.photos/seed/${seed}/1200/700/?blur=5');
     background-size: cover;
     margin: 0;
     padding: 0 20px;
