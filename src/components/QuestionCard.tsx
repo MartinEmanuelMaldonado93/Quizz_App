@@ -16,7 +16,7 @@ type Props = {
 
 export default function QuestionCard({question,answers,callback,userAnswer,questionNr,totalQuestions}:Props) {
   return (
-    <div>
+    <Wrapper> 
       <p className="number">
         Question {questionNr}/{totalQuestions}
       </p>
@@ -38,7 +38,7 @@ export default function QuestionCard({question,answers,callback,userAnswer,quest
           </ButtonWrapper> )) 
         }
       </div>
-    </div>
+    </Wrapper>  
   );
 }
 
