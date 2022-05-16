@@ -43,7 +43,6 @@ function App() {
     setLoading(false);
 
   }
-
   const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
     if(!gameOver){
       // Users answer
@@ -76,7 +75,7 @@ function App() {
     <>
     <GlobalStyle/>
     <div className={styles.Wrapper}> 
-        <h1>QUIZ</h1>
+        <h1 className={styles.h1}>QUIZ</h1>
         { gameOver || userAnswers.length === TOTAL_QUESTIONS ?
           ( <button className={styles.start}
             onClick={startTrivia}>

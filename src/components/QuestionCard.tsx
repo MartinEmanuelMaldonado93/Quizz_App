@@ -2,8 +2,8 @@ import React from "react";
 import {AnswerObject} from '../App';
 // Styles
 import { Wrapper, ButtonWrapper} from './QuestionCards.styles';
-
-
+// SASS styles
+import styles from '../Sass/style.module.scss';
 
 type Props = {
   question: string;
@@ -17,10 +17,10 @@ type Props = {
 export default function QuestionCard({question,answers,callback,userAnswer,questionNr,totalQuestions}:Props) {
   return (
     <Wrapper> 
-      <p className="number">
+      <p className={styles.number}>
         Question {questionNr}/{totalQuestions}
       </p>
-      <p dangerouslySetInnerHTML={{__html: question}}/> 
+      <p className={styles.p__question} dangerouslySetInnerHTML={{__html: question}}/> 
       <div>
         {
         answers.map( (answer) => (
